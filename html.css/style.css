@@ -1,0 +1,423 @@
+*{
+    /* margin: 0; */
+    /* padding: 0; */
+    font-family: sans-serif;
+}
+body{
+    background: #080808;
+    color: #fff;
+}
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(/img/img\ copy\ 1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    padding: 10px 2%;   
+}
+nav{
+    display: flex;
+    align-content:center ;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+}
+.logo{
+width: 140px;
+}
+nav ul li{display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a{
+    color: #fff;
+    text-decoration: none;          
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #E90000;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.heder-text{
+    margin-top: 20%;
+    font-size: 30px;
+}
+.heder-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+.heder-text h1 span{
+    color: #E90000;
+}
+/*------------------About----------------------*/
+#About{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 80px;
+    padding-bottom: 40px;
+    color: #ababab;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.About-col-1{
+    flex-basis: 35%;
+}
+.About-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+.About-col-2{
+    flex-basis: 60%;
+}
+.sum-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+}
+.sum-title-about{
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #E90000;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transform: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 50%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+    color: #E90000;
+    font-size: 14px;
+}
+
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+/*-----------------Services----------------------*/
+#services{
+    padding: 0 50px 20px;
+}
+.Services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 80px;
+}
+.Services-list div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition:  0.5s, transform 0.5s;
+}
+.Services-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.Services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.Services-list div a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.Services-list div:hover{
+    background-color: #E90000;
+    transform: translateY(-10px);
+}
+/*------------------Portfolio-------------------*/
+#work{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 40pxpx;
+    padding-bottom: 20px;
+    color: #ababab;
+}
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.work-layer{
+    width: 100%;
+    height: 0%;
+    background:linear-gradient(rgba(0,0,0,0.6),#E90000);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.layer a{
+    margin-top: 20px;
+    color: #E90000;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+.work:hover img{
+transform: scale(1.1);
+}
+.work:hover .layer{
+height: 100%;
+}
+.btn-more{
+        display: block;
+        border: 1px solid #E90000;
+        border-radius: 3px;
+        text-decoration: none;
+        color: #fff;
+        transition: background 0.5s;
+        font-size: 20px;
+        align-items: center;
+        width: fit-content;
+        margin: auto;
+        padding: 10px 30px;
+}
+.btn-more:hover{
+    background: #E90000;
+    border: 1px solid #ffffff;
+}
+/*------------------Portfolio-------------------*/
+/*----------------Gallery------------*/
+.gallery{
+    display: block;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    grid-auto-columns: 100px ;
+}
+.gallery-img{
+    background-color: red ;
+    border: 3px green solid;
+    border-radius: 3px;
+}
+
+/*----------------Gallery------------*/
+/*---------------contact--------------*/
+#contact{
+    padding: 10px 10%;
+    background-color: #ababab;
+}
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+color: #E90000;
+margin-right: 15px;
+font-size: 25px;
+}
+.social-icons{
+margin-top: 30px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: 0.5s;
+}
+.social-icons a:hover{
+    color: #E90000;
+    transform: translateY(-5px);
+}
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #E90000;
+    padding: 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.5s;
+}
+.btn2{
+    display: inline-block;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #080808;
+}
+.btn-btn2{
+    display: block;
+    color: #ffffff;
+}
+.btn:hover{
+    background: #E90000;
+    border: 1px solid #ffffff;
+}
+.contact-right forn{
+width: 100%;
+}
+form input,form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;    
+    color: rgb(255, 255, 255);
+    font-size: 18px;    
+    border-radius: 6px;
+}
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin: 0px;
+    cursor: pointer;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0 25px 0 ;
+    background: #000000;
+    font-weight: 300;
+}
+.copyright p span i{
+    color: #E90000;
+}
+#msg{
+    color: #61b752;
+    margin-top: 20px;
+    display: block;
+}
+/*-----------------Login page----------------------*/
+#login{
+    padding: 0 50px 20px;
+}
+.login-page{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin-top: 80px;
+}
+.login-page .login-page-1{
+    font-weight: 300;
+    border-radius: 10px;
+    transition:  0.5s, transform 0.5s;
+    align-items: center;
+}
+/*----
+.login-page .login-page-1 h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    text-align: center;
+}
+--------*/
+.login-page .login-page-1 input{
+    margin: 10px;
+    width: 570px;
+    height: 50px;
+    border-radius: 10px;
+    border-bottom: 50px;
+    border-top:none ;
+    border-left: none;
+    border-right: none;
+    background-color: #080808;
+}
+.login-page .login-page-1{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+
+    border-radius: 10px;
+    /* transition:  0.5s, transform 0.5s; */
+}
+.login-page .login-page-1 a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.login-page .login-page-1:hover{
+    background-color: #E90000;
+    transform: translateY(-10px);
+}
+.login-page-1 input{
+    padding: 0;
+    margin: 2px;
+    width: 50%;
+}
+
+     
